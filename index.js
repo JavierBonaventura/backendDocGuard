@@ -31,6 +31,10 @@ app.get('/users', async (req, res) => {
   res.json(users);
 });
 
+app.get('/', async (req, res) => {
+  res.send('Backend de Doc Guard');
+});
+
 app.post('/users', async (req, res) => {
   const { name, email, password } = req.body;
   const newUser = new User({ name, email, password });
